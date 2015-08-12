@@ -1,2 +1,3 @@
 # docker-q2a
-Docker scripts for Question2Answer
+Use "docker-compose up" to start
+Modify docker-compose.yml for your volumes mapping
