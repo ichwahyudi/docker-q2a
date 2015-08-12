@@ -1,0 +1,15 @@
+app:
+  image: docker-q2a:latest
+  links:
+   - q2adb:db
+  ports:
+   - "8083:80"
+q2adb:
+  image: mysql:5.6
+  volumes:
+   - ~/docker-data/q2a/db:/var/lib/mysql
+  environment:
+   - MYSQL_ROOT_PASSWORD=root
+   - MYSQL_USER=q2a
+   - MYSQL_PASSWORD=q2a
+   - MYSQL_DATABASE=q2a
