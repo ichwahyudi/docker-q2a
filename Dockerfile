@@ -7,8 +7,5 @@ RUN curl -o /q2a.zip http://www.question2answer.org/question2answer-latest.zip &
 RUN mv /var/www/html/qa-config-example.php /var/www/html/qa-config.php
 
 RUN sed -i -e 's/127.0.0.1/db/' /var/www/html/qa-config.php && \
-    sed -i -e 's/your-mysql-username/q2a/' /var/www/html/qa-config.php && \
-    sed -i -e 's/your-mysql-password/q2a/'     /var/www/html/qa-config.php && \
-    sed -i -e 's/your-mysql-db-name/q2a/'   /var/www/html/qa-config.php
 
 RUN docker-php-ext-install mysqli
